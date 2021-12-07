@@ -6,6 +6,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
+app.get("/", (req, res) => {
+    res.send(200, "Welcome to Docker and Heroku App")
+})
+
+
 app.get("/users", (req, res) => {
     console.log("Request");
     res.send(200, db)
